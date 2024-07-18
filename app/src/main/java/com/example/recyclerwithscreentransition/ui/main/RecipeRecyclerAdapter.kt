@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.HORIZONTAL
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
+import com.example.recyclerwithscreentransition.R
 import com.example.recyclerwithscreentransition.databinding.HorizontalRecipeBinding
 import com.example.recyclerwithscreentransition.databinding.ItemRecipeBinding
 import com.example.recyclerwithscreentransition.ui.model.Recipe
@@ -78,6 +79,7 @@ class RecipeRecyclerAdapter(
             binding.dishName.text = recipe.name
             Glide.with(binding.root.context)
                 .load(recipe.image)
+                .placeholder(R.drawable.ic_launcher_foreground)
                 .into(binding.dishImage)
         }
     }
